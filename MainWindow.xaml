@@ -1,0 +1,162 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Rechner" Height="470" Width="319">
+    <!--538*338-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="8"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7" />
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="7" />
+            <RowDefinition Height="280" />
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        
+        <!--Created a grid where in standart calculator wrote Standart and history button -->
+        <Grid Grid.Column="1"
+              Grid.Row="1">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="Calculation"  
+                       Text="Standard"  
+                       FontSize="18"
+                       Grid.Row="0"/>
+
+            <!--Screen of Calculator-->
+            <Rectangle Grid.Row="1"
+                       Fill="#FF1F1F1F" />
+
+            <TextBlock x:Name="NumbersInputOutput"
+                       Text=""
+                       Grid.Column="1"
+                           Foreground="White"
+                       Grid.Row="1"/>
+        </Grid>
+        
+        <!--Grid for space between Calculator's screen and button-->
+        <Grid Grid.Column="1"
+              Grid.Row="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="68"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="68"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="68"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="68"/>
+                <RowDefinition Height="3"/>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="Button7" 
+                    Content="7" Background="Black"
+                    Foreground="White" Grid.Row="1" 
+                    Grid.Column="1" Click="Button_Click"/>
+
+            <Button x:Name="Button8" 
+                    Content="8" Background="Black"
+                    Foreground="White" Grid.Row="1" 
+                    Grid.Column="3" Click="Button_Click"/>
+
+            <Button x:Name="Button9" 
+                    Content="9" Background="Black"
+                    Foreground="White" Grid.Row="1" 
+                    Grid.Column="5" Click="Button_Click"/>
+
+            <Button x:Name="ButtonMultiply" 
+                    Content="X" Background="Black" 
+                    Foreground="White" Grid.Row="1" 
+                    Grid.Column="7" Click="ButtonMultiply_Click"/>
+
+            <Button x:Name="Button4" 
+                    Content="4" Background="Black" 
+                    Foreground="White" Grid.Row="3" 
+                    Grid.Column="1" Click="Button_Click"/>
+
+            <Button x:Name="Button5" 
+                    Content="5" Background="Black" 
+                    Foreground="White" Grid.Row="3" 
+                    Grid.Column="3" Click="Button_Click"/>
+
+            <Button x:Name="Button6" 
+                    Content="6" Background="Black" 
+                    Foreground="White" Grid.Row="3" 
+                    Grid.Column="5" Click="Button_Click"/>
+
+            <Button x:Name="ButtonMinus" 
+                    Content="-" Background="Black" 
+                    Foreground="White" Grid.Row="3"
+                    Grid.Column="7" Click="ButtonMinus_Click"/>
+
+            <Button x:Name="Button1" 
+                    Content="1" Background="Black" 
+                    Foreground="White" Grid.Row="5"
+                    Grid.Column="1" Click="Button_Click"/>
+
+            <Button x:Name="Button2" 
+                    Content="2" Background="Black" 
+                    Foreground="White" Grid.Row="5" 
+                    Grid.Column="3" Height="68" VerticalAlignment="Top"
+                    Click="Button_Click"/>
+
+            <Button x:Name="Button3" 
+                    Content="3" Background="Black" 
+                    Foreground="White" Grid.Row="5" 
+                    Grid.Column="5" Click="Button_Click"/>
+
+            <Button x:Name="ButtonPlus" 
+                    Content="+" Background="Black"
+                    Foreground="White" Grid.Row="5" 
+                    Grid.Column="7" Click="ButtonPlus_Click"/>
+
+            <Button x:Name="ButtonDivide" 
+                    Content="/" Background="Black"
+                    Foreground="White" Grid.Row="7" 
+                    Grid.Column="1" Click="ButtonDivide_Click"/>
+
+            <Button x:Name="Button0" 
+                    Content="0" Background="Black"
+                    Foreground="White" Grid.Row="7"
+                    Grid.Column="3" Click="Button_Click"/>
+
+            <Button x:Name="ButtonClear" 
+                    Content="C" Background="Black"
+                    Foreground="White" Grid.Row="7" 
+                    Grid.Column="5" Click="ButtonClear_Click"/>
+
+            <Button x:Name="ButtonIs" 
+                    Content="=" Background="Black" 
+                    Foreground="White" Grid.Row="7" 
+                    Grid.Column="7" Click="ButtonIs_Click"/>
+        </Grid>
+    </Grid>
+</Window>
